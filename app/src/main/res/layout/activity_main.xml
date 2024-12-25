@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TextView hiển thị thông tin cá nhân -->
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên: Lại Chí Bảo\nLớp: K57kmt\nMSSV: K215520216829"
+        android:textSize="16sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"/>
+
+    <!-- Nút chuyển đổi -->
+    <Button
+        android:id="@+id/switchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chuyển sang WebView"
+        android:layout_below="@id/infoTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <!-- EditText để nhập tuổi -->
+    <EditText
+        android:id="@+id/ageInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nhập tuổi của bạn"
+        android:inputType="number"
+        android:layout_below="@id/switchButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Nút kiểm tra trạng thái -->
+    <Button
+        android:id="@+id/checkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kiểm tra trạng thái"
+        android:layout_below="@id/ageInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <!-- TextView hiển thị kết quả -->
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:layout_below="@id/checkButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000" />
+
+    <!-- WebView để hiển thị nội dung HTML -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/resultText"
+        android:visibility="gone" />
+</RelativeLayout>
